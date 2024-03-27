@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+      function showpassword(){
+        const text = document.getElementById("my-password");
+        const checkbox = document.getElementById("my-checkbox")
+        if(text.type == "password"){
+             text.type = "text"
+        }else{
+            text.type ="password"
+        }
+      }
+    </script>
+</head>
+<body>
+    <input type="password" id="my-password"></input>
+    <input type='checkbox' id="my-checkbox" onchange=showpassword()>Show password</button>
+</body>
+</html>
