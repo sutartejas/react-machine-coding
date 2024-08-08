@@ -9,8 +9,7 @@ const TrafficLight = ({ initialColor = 'red', config }) => {
     useEffect(() => {
 
         const { duration, nextColor } = config[currentColor];
-        console.log(duration)
-
+    
         const timer = setTimeout(() => {
             setCurrentColor(nextColor)
         }, duration);
@@ -19,8 +18,6 @@ const TrafficLight = ({ initialColor = 'red', config }) => {
         }
 
     }, [currentColor]);
-
-    console.log(config, config.currentColor)
 
     return <div className="traffic-light-container">{
         Object.keys(config).map((color, i) => {
